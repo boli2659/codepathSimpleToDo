@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         i.putExtra("name", items.get(pos));
                         i.putExtra("position", pos);
                         startActivityForResult(i, 2);
-
+                        //writeItems();
 
                         //return true;
                     }
@@ -113,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
         File filesDir = getFilesDir();
         File todoFile = new File(filesDir, "todo.txt");
         try {
-            FileUtils.writeLines(todoFile, items);
+            items = new ArrayList<String>(FileUtils.readLines(todoFile));
         }
         catch (IOException e) {
-            e.printStackTrace();
+            items = new ArrayList<String>();
         }
         //ZACH YOU ARE ON SLIDE 24!!!!!!!!!!!!!!!!!!!!!!!!!
     }
