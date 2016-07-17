@@ -30,4 +30,59 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="onSaveItem"/>
+
+    <CalendarView
+        android:layout_width="500dp"
+        android:layout_height="450dp"
+        android:id="@+id/calendarView"
+        android:layout_below="@+id/tvPriorityPrompt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When do you need to have this done?"
+        android:id="@+id/tvCalendarPrompt"
+        android:layout_alignTop="@+id/calendarView"
+        android:layout_alignRight="@+id/rbPriority"
+        android:layout_alignEnd="@+id/rbPriority"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is the priority?"
+        android:id="@+id/tvPriorityPrompt"
+        android:layout_below="@+id/btnSave"
+        android:layout_centerHorizontal="true"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbPriority"
+        android:layout_above="@+id/tvCalendarPrompt"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Not Urgent"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Very Urgent"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/tvPriorityPrompt"
+        android:layout_alignRight="@+id/calendarView"
+        android:layout_alignEnd="@+id/calendarView"/>
+
 </RelativeLayout>

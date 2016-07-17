@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class EditItemActivity extends AppCompatActivity {
@@ -24,19 +26,25 @@ int pos;
     public void onSaveItem(View v) {
         EditText etNewItem= (EditText) findViewById(R.id.etEditItem);
         String editedItem = etNewItem.getText().toString();
+        CalendarView cd = (CalendarView) findViewById(R.id.calendarView);
+        long dueDate = cd.getDate();
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.rbPriority);
+        float priority = ratingBar.getRating();
         // Prepare data intent
-        System.out.println("SECOND");
+        //System.out.println("SECOND");
         Intent data = new Intent();
         // Pass relevant data back as a result
         data.putExtra("name", editedItem);
+        data.putExtra("date", dueDate);
+        data.putExtra("priority", priority);
         data.putExtra("position", pos);
-        System.out.println("THIRD");
+        //System.out.println("THIRD");
         //data.putExtra("code", 2); // ints work too
         // Activity finished ok, return the data
         setResult(RESULT_OK, data); // set result code and bundle data for response
-        System.out.println("FOURTH");
+        //System.out.println("FOURTH");
         finish(); // closes the activity, pass data to parent
-        System.out.println("FIFTH-- OPTIONAL");
+        //System.out.println("FIFTH-- OPTIONAL");
 
     }
 }
