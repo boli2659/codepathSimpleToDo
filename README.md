@@ -4,7 +4,7 @@ Simple To Do app is an android app that allows building a todo list and basic to
 
 Submitted by: Zach Boline
 
-Time spent: 2.5 hours spent in total
+Time spent: 6.5 hours spent in total
 
 ## User Stories
 
@@ -38,6 +38,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+I was worried about using SQLite to persist data, but that ended up going pretty smoothy.
+Using the calendar and the rating bar for priority were tough because obtaining the values
+they were set at did not work the way I thought they would, and most online resources I looked at reinforced how I originally thought the functions would work.
+Also my last commit, my gif didn't update on github for my new app even though I replaced the file and pushed it, so hopefully now it is working.
 
 ## License
 
